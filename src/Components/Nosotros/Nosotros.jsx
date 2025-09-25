@@ -1,9 +1,9 @@
-const Nosotros = () => {
+const Nosotros = ({BASE_URL}) => {
   return (
     <section id="nosotros" className="bg-amber-200/10 scroll-mt-10">
       <div className="flex flex-col lg:flex-row items-center gap-5 px-5 py-15 justify-center">
         <div className="lg:w-500">
-          <img src="/Musica.jpg" className="rounded lg:w-full" />
+          <img src={`${BASE_URL}Musica.jpg`} className="rounded lg:w-full" />
         </div>
         
         <div className=" flex flex-col justify-center items-center gap-5">

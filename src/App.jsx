@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import {useEffect } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Baner from './Components/Baner';
@@ -10,7 +10,7 @@ import Footer from './Components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 function App() {
-  const [count, setCount] = useState(0);
+  const URL = import.meta.env.BASE_URL;
   useEffect(() => {
     AOS.init({
       duration: 1000, 
@@ -22,8 +22,8 @@ function App() {
     <>
       <Header />
       <Baner />
-      <Nosotros />
-      <Cursos />
+      <Nosotros BASE_URL={URL} />
+      <Cursos BASE_URL={URL} />
       <Testimonios />
       <Contactos />
       <Footer />
